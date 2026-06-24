@@ -17,7 +17,8 @@ export const Navbar = ({ stars }: NavbarProps) => {
 						<Link passHref href="/home" className="flex items-center gap-2.5">
 							<Image
 								src="/pws-logo.svg"
-								alt="Print With Synergy"
+								alt=""
+								aria-hidden
 								width={40}
 								height={34}
 								priority
@@ -37,7 +38,6 @@ export const Navbar = ({ stars }: NavbarProps) => {
 							icon={
 								<Image src="/github.svg" alt="Github" width={16} height={16} />
 							}
-							target="_blank"
 							href="https://github.com/printwithsynergy/cap"
 							size="sm"
 							className="w-full font-medium sm:w-auto"
