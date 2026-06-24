@@ -1,0 +1,14 @@
+/* Print With Synergy brand palette — navy #0F172A / lime #A3E635.
+   Imported after globals.css (in layout.tsx) so these :root overrides win
+   without editing upstream globals.css, keeping rebases painless. */
+:root {
+	--primary: #0f172a;
+	--primary-2: #1e293b;
+	--primary-3: #0a0f1d;
+	--secondary: #a3e635;
+	--secondary-2: #84cc16;
+	--secondary-3: #65a30d;
+	--tertiary: #ecfccb;
+	--tertiary-2: #f7fee7;
+	--tertiary-3: #e6eaf2;
+}
