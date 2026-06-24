@@ -1,4 +1,4 @@
-import { Button, Logo } from "@cap/ui";
+import { Button } from "@cap/ui";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "@/components/ui/MobileMenu";
@@ -14,15 +14,19 @@ export const Navbar = ({ stars }: NavbarProps) => {
 			<nav className="relative p-2 mx-auto w-full max-w-[calc(100%-20px)] bg-white rounded-full border lg:max-w-fit border-zinc-200 h-fit">
 				<div className="flex gap-12 justify-between items-center mx-auto max-w-5xl h-full transition-all">
 					<div className="flex items-center">
-						<Link passHref href="/home">
-							<Logo
-								className="transition-all duration-200 ease-out"
-								viewBoxDimensions="0 0 120 40"
-								style={{
-									width: 90,
-									height: 40,
-								}}
+						<Link passHref href="/home" className="flex items-center gap-2.5">
+							<Image
+								src="/pws-logo.svg"
+								alt=""
+								aria-hidden
+								width={40}
+								height={34}
+								priority
+								className="w-auto h-8 transition-all duration-200 ease-out"
 							/>
+							<span className="text-base font-semibold tracking-tight text-[#0F172A] whitespace-nowrap">
+								Print With Synergy
+							</span>
 						</Link>
 						<div className="hidden lg:flex">
 							<DesktopNavLinks />
@@ -34,8 +38,7 @@ export const Navbar = ({ stars }: NavbarProps) => {
 							icon={
 								<Image src="/github.svg" alt="Github" width={16} height={16} />
 							}
-							target="_blank"
-							href="https://github.com/CapSoftware/Cap"
+							href="https://github.com/printwithsynergy/cap"
 							size="sm"
 							className="w-full font-medium sm:w-auto"
 						>

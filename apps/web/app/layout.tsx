@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import "@/app/brand-tokens.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
@@ -41,17 +42,17 @@ const defaultFont = localFont({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://cap.so"),
-	title: "Cap — Beautiful screen recordings, owned by you.",
+	metadataBase: new URL("https://record.withsynergy.io"),
+	title: "Print With Synergy — Screen recording, owned by you.",
 	description:
-		"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+		"Self-hosted screen recording by Print With Synergy. Automation that actually ships — record and share in seconds.",
 	openGraph: {
-		title: "Cap — Beautiful screen recordings, owned by you.",
+		title: "Print With Synergy — Screen recording, owned by you.",
 		description:
-			"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+			"Self-hosted screen recording by Print With Synergy. Automation that actually ships — record and share in seconds.",
 		type: "website",
-		url: "https://cap.so",
-		images: ["https://cap.so/og.png"],
+		url: "https://record.withsynergy.io",
+		images: ["https://record.withsynergy.io/og.png"],
 	},
 };
 
@@ -59,28 +60,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
 	return (
 		<html className={defaultFont.className} lang="en">
 			<head>
-				<link
-					rel="apple-touch-icon"
-					sizes="180x180"
-					href="/apple-touch-icon.png"
-				/>
-				<link
-					rel="icon"
-					type="image/png"
-					sizes="32x32"
-					href="/favicon-32x32.png"
-				/>
-				<link
-					rel="icon"
-					type="image/png"
-					sizes="16x16"
-					href="/favicon-16x16.png"
-				/>
+				<link rel="icon" type="image/svg+xml" href="/pws-logo.svg" />
 				<link rel="manifest" href="/site.webmanifest" />
-				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-				<link rel="shortcut icon" href="/favicon.ico" />
-				<meta name="msapplication-TileColor" content="#da532c" />
-				<meta name="theme-color" content="#ffffff" />
+				<meta name="msapplication-TileColor" content="#0F172A" />
+				<meta name="theme-color" content="#0F172A" />
 			</head>
 			<body suppressHydrationWarning>
 				<Script src="/theme-script.js" strategy="beforeInteractive" />
